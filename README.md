@@ -36,3 +36,10 @@ Summary:
 Total PNG size   : 72588 bytes
 Total HPRC2 size : 57999 bytes
 Overall ratio    :  0.80
+
+pip install numpy pillow
+# optional: install JPEG XL CLI (cjxl, djxl) from your package manager or the official binaries
+
+python bench_hprc2_plus.py ./images --csv results.csv
+
+It will print per-file sizes and ratios (each codec vs PNG) and a totals block. If cjxl isn’t present, the JPEG XL column will show -1 and be omitted from totals.
